@@ -1,0 +1,33 @@
+@import 'src/common/button';
+@import 'src/common/colors';
+
+.dialog-item {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-item-add {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text {
+    width: 100%;
+    margin-right: 40px;
+    color: $white;
+    background-color: $color-1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    border: $color-2 solid 1px;
+    border-radius: 10px;
+}
+
+.text:focus {
+    outline: none;
+}
+
+.btn {
+    @include button;
+}

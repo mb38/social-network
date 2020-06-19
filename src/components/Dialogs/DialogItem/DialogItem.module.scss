@@ -1,0 +1,20 @@
+@import 'src/common/colors';
+
+.container {
+    margin-bottom: 15px;
+}
+
+.dialog {
+    font-size: 20px;
+    text-decoration: none;
+    color: $white;
+    transition: 0.3s;
+}
+
+.dialog:hover {
+    color: $white;
+    border: $color-2 solid 1px;
+    border-radius: 6px;
+    padding: 5px;
+    text-shadow: -3px 3px 2px $black;
+}

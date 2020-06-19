@@ -1,0 +1,12 @@
+@import 'src/common/colors';
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: $white;
+    text-align: center;
+}

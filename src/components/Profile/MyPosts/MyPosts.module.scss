@@ -1,0 +1,43 @@
+@import "src/common/colors";
+@import "src/common/button";
+
+.container {
+    margin-top: 10px;
+}
+
+.add {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.photo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text {
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: $white;
+    background-color: $color-1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    border: $color-2 solid 1px;
+    border-radius: 10px;
+}
+
+.text:focus {
+    outline: none;
+}
+
+.btn {
+    @include button;
+    width: 140px;
+}
+

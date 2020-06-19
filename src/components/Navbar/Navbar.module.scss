@@ -1,0 +1,40 @@
+.container {
+    width: 8vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 15px;
+    border: #006400 solid 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.item {
+    padding-bottom: 15px;
+}
+
+.item-settings {
+    padding-top: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s;
+    padding: 4px;
+}
+
+.link:hover {
+    color: #fff;
+    border: #006400 solid 1px;
+    border-radius: 6px;
+    padding: 6px;
+    text-shadow: -3px 3px 2px #000;
+}
+
+.active {
+    transition: 0.3s;
+    background-color: #006400;
+    border: #006400 solid 1px;
+    border-radius: 6px;
+}

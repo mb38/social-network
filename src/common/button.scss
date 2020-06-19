@@ -1,0 +1,22 @@
+@import 'src/common/colors';
+
+@mixin button {
+  width: 100px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  color: $white;
+  background-color: $color-2;
+  border: $color-2 solid 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin button-unfollow {
+  @include button;
+  background-color: $color-3;
+  border: $color-3 solid 1px;
+}

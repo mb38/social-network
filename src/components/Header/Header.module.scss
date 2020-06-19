@@ -1,0 +1,29 @@
+@import 'src/common/colors';
+@import 'src/common/button';
+
+.container {
+    width: 100%;
+    height: 80px;
+    border-bottom: $color-2 solid 1px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include button;
+}
+
+.login-item {
+    font-size: 20px;
+    color: $white;
+}

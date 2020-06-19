@@ -1,10 +1,13 @@
-.App {
-  text-align: center;
+@import 'src/common/colors';
+
+body {
+  background-color: $color-1;
 }
 
-.App-logo {
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +17,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  !*background-color: #282c34;*!
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +38,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/
