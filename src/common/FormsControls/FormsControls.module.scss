@@ -1,0 +1,54 @@
+@import "src/common/colors";
+@import 'src/common/typography';
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-textarea {
+  width: 100%;
+  margin-right: 40px;
+  color: $white;
+  background-color: $color-1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  border: $color-2 solid 1px;
+  border-radius: 10px;
+}
+
+.form-textarea:focus {
+  outline: none;
+}
+
+.form-textarea.error {
+  border: $color-6 solid 1px;
+}
+
+.form-error {
+  width: 100px;
+  color: $color-6;
+  margin-right: 20px;
+}
+
+.form-container__input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  color: $white;
+  background-color: $color-1;
+  border: $color-2 solid 1px;
+  padding: 2px;
+  @include font-1-desktop;
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-input.error {
+  border: $color-6 solid 1px;
+}

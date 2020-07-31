@@ -17,7 +17,6 @@ let store = {
                 {id: 1, message:'Hi, how are you?', likesCount: 0 },
                 {id: 2, message:'It`s my first post', likesCount: 23 },
             ],
-            newPostText: '',
         },
         dialogsPage: {
             dialogs: [
@@ -28,7 +27,6 @@ let store = {
                 {id: 1, message: 'Hello'},
                 {id: 2, message: 'How are you?'},
             ],
-            newMassageBody: '',
         },
     },
     _callSubscriber()  {

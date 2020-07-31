@@ -1,0 +1,21 @@
+@import 'src/common/colors';
+@import 'src/common/typography';
+
+.container {
+  color: $white;
+}
+
+.status-title {
+  @include font-1-desktop;
+}
+
+.status-text {
+  @include font-1-desktop;
+  background-color: $color-1;
+  border: $color-2 1px solid;
+  &:active, &:hover, &:focus {
+    outline: none;
+  }
+}
+
+

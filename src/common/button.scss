@@ -13,6 +13,10 @@
   &:focus {
     outline: none;
   }
+  &:hover {
+    color: $white;
+    opacity: 70%;
+  }
 }
 
 @mixin button-unfollow {

@@ -1,10 +1,12 @@
+@import 'src/common/colors';
+
 .container {
-    width: 8vw;
+    width: 125px;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     padding: 15px;
-    border: #006400 solid 1px;
+    border: $color-2 solid 1px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -18,23 +20,23 @@
 
 .link {
     text-decoration: none;
-    color: #fff;
+    color: $white;
     font-size: 20px;
     transition: 0.3s;
     padding: 4px;
 }
 
 .link:hover {
-    color: #fff;
-    border: #006400 solid 1px;
+    color: $white;
+    border: $color-2 solid 1px;
     border-radius: 6px;
     padding: 6px;
-    text-shadow: -3px 3px 2px #000;
+    text-shadow: -3px 3px 2px $black;
 }
 
 .active {
     transition: 0.3s;
-    background-color: #006400;
-    border: #006400 solid 1px;
+    background-color: $color-2;
+    border: $color-2 solid 1px;
     border-radius: 6px;
 }

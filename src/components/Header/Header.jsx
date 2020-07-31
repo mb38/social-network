@@ -8,8 +8,10 @@ function Header(props) {
         <div className={classes['container']}>
             <img src={Logo} className={classes['logo']} alt='logo' />
             <div className={classes['login']}>
-                { props.isAuth ? props.login :
-                    <NavLink to={'/login'} className={classes['login-item']}>Login</NavLink>
+                { props.isAuth
+                    ? <div className={classes['login-user']}>{props.login}
+                        <button onClick={props.logout} className={classes['logout']}>Log out</button></div>
+                    : <NavLink to={'/login'} className={classes['login-item']}>Login</NavLink>
                 }
             </div>
         </div>

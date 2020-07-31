@@ -1,5 +1,6 @@
 @import 'src/common/colors';
 @import 'src/common/button';
+@import 'src/common/typography';
 
 .container {
     width: 100%;
@@ -18,12 +19,24 @@
 
 .login {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.login-user {
+    @include font-1-desktop;
+    color: $white;
+}
+
+.logout {
     @include button;
+    font-size: 16px;
+    margin-left: 10px;
 }
 
 .login-item {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include button;
     color: $white;
 }

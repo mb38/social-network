@@ -1,4 +1,5 @@
 @import 'src/common/colors';
+@import 'src/common/typography';
 
 .container {
 
@@ -49,12 +50,10 @@
 }
 
 .profile-info__descr {
-    margin-bottom: 8px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3em;
+    @include font-1-desktop;
 }
 
 .profile-info__name {
-    font-size: 1.8em;
+    @include font-2-desktop;
     margin-bottom: 15px;
 }

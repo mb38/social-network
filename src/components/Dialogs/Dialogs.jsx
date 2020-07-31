@@ -3,6 +3,9 @@ import {Row, Col} from 'antd';
 import classes from "./Dialogs.module.scss";
 import DialogItem from "./DialogItem/DialogItem"
 import Message from "./Message/Message"
+import {Field, reduxForm} from "redux-form";
+import {Textarea} from "../../common/FormsControls/FormsControls";
+import {maxLengthCreator, required} from "../../utils/validations/validators";
 
 function Dialogs(props) {
 
@@ -14,15 +17,9 @@ function Dialogs(props) {
     let messagesElements = state.messages
         .map( m => <Message message={m.message} key={m.id}/>);
 
-    let newMessageBody = state.newMassageBody;
 
-    let onSendMessageBody = () => {
-        props.sendMessageCreator();
-    }
-
-    let newMessageChange = (elem) => {
-        let body = elem.target.value;
-        props.updateNewMessageBody(body);
+    let addNewMessage = (values) => {
+        props.sendMessageCreator(values.newMessageBody)
     }
 
     return (
@@ -36,11 +33,7 @@ function Dialogs(props) {
                 <div className={classes['dialog-item']}>
                     {messagesElements}
                     <div className={classes['dialog-item-add']}>
-                        <textarea value={newMessageBody}
-                                  onChange={newMessageChange}
-                                  className={classes['text']}
-                                  placeholder='Enter your message'/>
-                        <button onClick={onSendMessageBody} className={classes['btn']}>Send</button>
+                        <AddMessageFormRedux onSubmit={addNewMessage} />
                     </div>
                 </div>
             </Col>
@@ -48,4 +41,22 @@ function Dialogs(props) {
     );
 }
 
+const maxLength100 = maxLengthCreator(100);
+
+const AddMessageForm = (props) => {
+    return (
+        <form onSubmit={props.handleSubmit} className={classes['form-container']}>
+            <Field component={Textarea}
+                   name={'newMessageBody'}
+                   placeholder={'Enter your message'}
+                   validate={[required, maxLength100]}
+            />
+            <button className={classes['btn']}>Send</button>
+        </form>
+    )
+}
+
+const AddMessageFormRedux = reduxForm({form: 'dialogsAddMessageForm'})(AddMessageForm)
+
 export default Dialogs;
+

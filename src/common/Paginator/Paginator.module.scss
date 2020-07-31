@@ -1,0 +1,23 @@
+@import 'src/common/colors';
+
+.container {
+  margin-top: 20px;
+}
+
+.select-page {
+  color: $white;
+  font-size: 25px;
+  margin-right: 5px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.selected {
+  border: $white solid 1px;
+}
+
+.btn {
+  background: $color-1;
+  color: $white;
+  border-color: $color-2;
+}
